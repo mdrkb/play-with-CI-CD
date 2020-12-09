@@ -4,6 +4,7 @@
 import pytest
 
 
+
 from fizzbuzz import fizz_buzz
 
 inputs = [3, 5, 15, 4, 10, 115, 7]
