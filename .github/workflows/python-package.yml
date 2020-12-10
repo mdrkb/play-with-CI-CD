@@ -30,7 +30,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run black
       run: |
-        black
+        black --check .
     - name: Run flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -42,7 +42,7 @@ jobs:
         pylint
     - name: Run isort
       run: |
-        isort
+        isort --profile black
     - name: Run test with pytest
       run: |
         pytest
